@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "No dependencies to install for static site"
+
+  build:
+    commands:
+      - echo "Building the HTML website..."
+      - mkdir output
+      - cp -r * output/
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: output
